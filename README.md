@@ -54,8 +54,11 @@ User → React Frontend → Supabase API → Database
 
 landing_ui/
  ├ app/          Next.js application routes and pages
+ 
  ├ components/   Reusable UI components
+ 
  ├ hooks/        Custom React hooks
+ 
  ├ lib/          Shared utilities and services
  ├ templates/    UI layout templates
  ├ public/       Static assets
