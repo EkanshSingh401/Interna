@@ -1,0 +1,46 @@
+# dependencies
+node_modules/
+
+# next.js
+.next/
+out/
+build/
+
+# production
+dist/
+
+# environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# macOS
+.DS_Store
+
+# vscode
+.vscode/
+
+# idea
+.idea/
+
+# typescript
+*.tsbuildinfo
+
+# testing
+coverage/
+
+# misc
+*.log
+
+# vercel
+.vercel
+
+# local config
+*.local
