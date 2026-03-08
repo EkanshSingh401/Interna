@@ -1,0 +1,63 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[left=0.5in, right=0.5in, top=0.5in, bottom=0.5in]{geometry}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\hrule]
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+    {\Huge \textbf{[[& fullName ]]}} \\
+    [[& email ]] $\bullet$ [[& phone ]]
+    [[#linkedin]] $\bullet$ \href{https://[[& linkedin ]]}{LinkedIn} [[/linkedin]]
+    [[#github]] $\bullet$ \href{https://[[& github ]]}{GitHub} [[/github]]
+\end{center}
+
+[[#education.0]]
+\section*{Education}
+[[#education]]
+\noindent \textbf{[[& school ]]} \hfill [[& location ]] \\
+[[& degree ]] \hfill [[& date ]]
+\vspace{5pt}
+[[/education]]
+[[/education.0]]
+
+[[#skillCategories.0]]
+\section*{Skills}
+[[#skillCategories]]
+\noindent \textbf{[[& name]]:} [[& skills]] \\
+[[/skillCategories]]
+[[/skillCategories.0]]
+
+[[#experience.0]]
+\section*{Experience}
+[[#experience]]
+\noindent \textbf{[[& company ]]} \hfill [[& location ]] \\
+\textit{[[& title ]]} \hfill [[& startDate ]]
+\begin{itemize}[nosep, leftmargin=*]
+  [[#bullets]]
+  \item [[& . ]]
+  [[/bullets]]
+\end{itemize}
+\vspace{5pt}
+[[/experience]]
+[[/experience.0]]
+
+[[#projects.0]]
+\section*{Projects}
+[[#projects]]
+\noindent \textbf{[[& title ]]} \hfill [[& date ]] \\
+\textit{[[& tech ]]}
+\begin{itemize}[nosep, leftmargin=*]
+  [[#bullets]]
+  \item [[& . ]]
+  [[/bullets]]
+\end{itemize}
+\vspace{5pt}
+[[/projects]]
+[[/projects.0]]
+
+\end{document}

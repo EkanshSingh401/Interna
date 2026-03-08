@@ -1,0 +1,57 @@
+export const PRICING_PLANS = [
+  {
+    id: "free",
+    name: "Free",
+    price: "$0",
+    period: "forever",
+    description: "Get started with your internship search.",
+    tier: "free",
+    cta: "Start Your Mission",
+    ctaStyle: "ghost",
+    highlighted: false,
+    priceId: "", // Free plan doesn't need a priceId
+  },
+  {
+    id: "pro-monthly",
+    name: "Pro Monthly",
+    price: "$8.99",
+    period: "per month",
+    description: "For ambitious students who want every advantage.",
+    tier: "pro",
+    cta: "Unlock Pro",
+    ctaStyle: "outline",
+    highlighted: false,
+    // Ensure these match your Stripe Dashboard exactly
+    priceId: process.env.NEXT_PUBLIC_STRIPE_PRO_MONTHLY_ID || "price_YOUR_MONTHLY_ID", 
+  },
+  {
+    id: "pro-annual",
+    name: "Pro Annual",
+    price: "$67.99",
+    period: "per year",
+    savings: "Save $40/yr",
+    description: "Best value for committed students.",
+    tier: "pro",
+    cta: "Launch Annual Mission",
+    ctaStyle: "primary",
+    highlighted: true,
+    priceId: process.env.NEXT_PUBLIC_STRIPE_PRO_ANNUAL_ID || "price_YOUR_ANNUAL_ID",
+  },
+] as const;
+
+export const PRICING_FEATURES = [
+  { name: "Total applications", free: "10 apps", pro: "Unlimited" },
+  { name: "Entry method", free: "Manual only", pro: "Fast Add URL scanner + Autofill" },
+  { name: "Resume versions", free: "1 version", pro: "10 versions/mo with feedback" },
+  { name: "Resume notes", free: false, pro: true },
+  { name: "Weekly planning", free: "1 static plan", pro: "Dynamic plans (auto-adjust)" },
+  { name: "Tasks per plan", free: false, pro: "3–5 tasks" },
+  { name: "Weekly review insights", free: false, pro: true },
+  { name: "Readiness score", free: "Basic", pro: "Detailed (reveals missing skills)" },
+  { name: "AI coach insights", free: "5/month", pro: "100–200/month" },
+  { name: "Company-specific tips", free: false, pro: true },
+  { name: "Follow-up reminders", free: false, pro: true },
+  { name: "Email & accountability nudges", free: false, pro: true },
+  { name: "Priority support", free: false, pro: true },
+  { name: "Advanced analytics", free: false, pro: true },
+];

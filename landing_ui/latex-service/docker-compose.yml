@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  # 1. Your Next.js Application
+  web:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: nextjs_web_app
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app             # Syncs your code for Hot Reloading
+      - /app/node_modules  # Prevents local node_modules from overriding container's
+    environment:
+      # This allows Next.js to find the LaTeX service by name
+      - LATEX_SERVICE_URL=http://latex-service:3001
+      # Pass your existing env vars here
+      - NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=${NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
+      - CLERK_SECRET_KEY=${CLERK_SECRET_KEY}
+      - NEXT_PUBLIC_SUPABASE_URL=${NEXT_PUBLIC_SUPABASE_URL}
+      - NEXT_PUBLIC_SUPABASE_ANON_KEY=${NEXT_PUBLIC_SUPABASE_ANON_KEY}
+    depends_on:
+      - latex-service
+
+  # 2. The LaTeX Microservice
+  latex-service:
+    build: 
+      context: ./latex-service
+      dockerfile: Dockerfile
+    container_name: latex_compiler
+    ports:
+      - "3001:3001"
+    volumes:
+      # Maps the templates folder so you can edit .tex files without restarting
+      - ./latex-service/templates:/app/templates

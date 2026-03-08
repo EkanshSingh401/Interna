@@ -1,0 +1,75 @@
+\documentclass[]{article}
+\usepackage[a4paper, margin=0.5in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{multicol}
+
+\pagestyle{empty}
+\titleformat{\section}{\large\bfseries\uppercase}{}{0em}{}[\hrule]
+
+\begin{document}
+
+% Header
+\noindent
+{\Huge \textbf{[[& fullName ]]}} \\
+[[& email ]] | [[& phone ]] | \href{https://[[& linkedin ]]}{LinkedIn}
+
+\vspace{10pt}
+
+% Two Column Layout
+\begin{multicols}{2}
+
+[[#education.0]]
+\section*{Education}
+[[#education]]
+\noindent \textbf{[[& school ]]} \\
+[[& degree ]] \\
+\textit{[[& date ]]} \\
+\textit{[[& location ]]}
+\vspace{8pt}
+[[/education]]
+[[/education.0]]
+
+[[#skillCategories.0]]
+\section*{Skills}
+[[#skillCategories]]
+\noindent \textbf{[[& name]]} \\
+[[& skills]]
+\vspace{5pt}
+[[/skillCategories]]
+[[/skillCategories.0]]
+
+\columnbreak
+
+[[#experience.0]]
+\section*{Experience}
+[[#experience]]
+\noindent \textbf{[[& company ]]} \\
+\textit{[[& title ]]} \hfill [[& startDate ]]
+\begin{itemize}[nosep, leftmargin=*]
+  [[#bullets]]
+  \item [[& . ]]
+  [[/bullets]]
+\end{itemize}
+\vspace{8pt}
+[[/experience]]
+[[/experience.0]]
+
+[[#projects.0]]
+\section*{Projects}
+[[#projects]]
+\noindent \textbf{[[& title ]]} \\
+\textit{[[& tech ]]} \hfill [[& date ]]
+\begin{itemize}[nosep, leftmargin=*]
+  [[#bullets]]
+  \item [[& . ]]
+  [[/bullets]]
+\end{itemize}
+\vspace{8pt}
+[[/projects]]
+[[/projects.0]]
+
+\end{multicols}
+
+\end{document}

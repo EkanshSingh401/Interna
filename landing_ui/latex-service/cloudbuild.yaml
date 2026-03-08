@@ -1,0 +1,5 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/future-ripsaw-485519-n8/interna-latex-engine', '.']
+images:
+  - 'gcr.io/future-ripsaw-485519-n8/interna-latex-engine'

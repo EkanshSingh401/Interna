@@ -1,0 +1,61 @@
+\documentclass[11pt]{article}
+\usepackage{palatino} % Elegant font
+\usepackage[margin=0.75in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+
+\titleformat{\section}{\scshape\Large\raggedright}{}{0em}{}[\titlerule]
+\pagestyle{empty}
+
+\begin{document}
+\begin{center}
+    {\Huge \textsc{[[& fullName ]]}} \\ \vspace{5pt}
+    \small [[& email ]] $\cdot$ [[& phone ]]
+\end{center}
+
+[[#education.0]]
+\section*{Education}
+[[#education]]
+\noindent \textbf{[[& school ]]} \hfill [[& location ]] \\
+[[& degree ]] \hfill \textit{[[& date ]]}
+\vspace{8pt}
+[[/education]]
+[[/education.0]]
+
+[[#experience.0]]
+\section*{Experience}
+[[#experience]]
+\noindent \textbf{[[& company ]]} \hfill [[& location ]] \\
+\textit{[[& title ]]} \hfill \textit{[[& startDate ]]}
+\begin{itemize}[leftmargin=0.2in]
+  [[#bullets]]
+  \item [[& . ]]
+  [[/bullets]]
+\end{itemize}
+\vspace{8pt}
+[[/experience]]
+[[/experience.0]]
+
+[[#projects.0]]
+\section*{Projects}
+[[#projects]]
+\noindent \textbf{[[& title ]]} \hfill \textit{[[& date ]]} \\
+\textit{[[& tech ]]}
+\begin{itemize}[leftmargin=0.2in]
+  [[#bullets]]
+  \item [[& . ]]
+  [[/bullets]]
+\end{itemize}
+\vspace{8pt}
+[[/projects]]
+[[/projects.0]]
+
+[[#skillCategories.0]]
+\section*{Skills}
+[[#skillCategories]]
+\noindent \textbf{[[& name]]:} [[& skills]] \\
+[[/skillCategories]]
+[[/skillCategories.0]]
+
+\end{document}

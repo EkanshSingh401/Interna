@@ -1,0 +1,72 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper, bottom=25mm, top=25mm]{geometry}
+\usepackage{times}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\pagestyle{empty}
+
+% Harvard Style Formatting
+\titleformat{\section}{\large\bfseries\uppercase}{}{0em}{}[\titlerule]
+\newcommand{\entry}[4]{
+  \noindent\textbf{#1} \hfill #2 \\
+  \textit{#3} \hfill \textit{#4}
+}
+\newcommand{\bulletlist}[1]{\begin{itemize}[leftmargin=0.5cm, nosep]#1\end{itemize}\vspace{5pt}}
+
+\begin{document}
+\begin{center}
+    {\LARGE \textbf{[[& fullName ]]}} \\ \vspace{5pt}
+    [[& email ]] | [[& phone ]] \\
+    [[#linkedin]] \href{https://[[& linkedin ]]}{LinkedIn} | [[/linkedin]]
+    [[#github]] \href{https://[[& github ]]}{GitHub} [[/github]]
+\end{center}
+\vspace{10pt}
+
+[[#education.0]]
+\section*{EDUCATION}
+[[#education]]
+\entry{[[& school ]]}{[[& date ]]}{[[& degree ]]}{[[& location ]]}
+\vspace{8pt}
+[[/education]]
+[[/education.0]]
+
+[[#experience.0]]
+\section*{EXPERIENCE}
+[[#experience]]
+\entry{[[& company ]]}{[[& startDate ]]}{[[& title ]]}{[[& location ]]}
+[[#bullets.0]]
+\bulletlist{
+  [[#bullets]]
+  \item [[& . ]]
+  [[/bullets]]
+}
+[[/bullets.0]]
+[[/experience]]
+[[/experience.0]]
+
+[[#projects.0]]
+\section*{PROJECTS}
+[[#projects]]
+\noindent\textbf{[[& title ]]} | \textit{[[& tech ]]} \hfill [[& date ]]
+[[#bullets.0]]
+\bulletlist{
+  [[#bullets]]
+  \item [[& . ]]
+  [[/bullets]]
+}
+[[/bullets.0]]
+[[/projects]]
+[[/projects.0]]
+
+[[#skillCategories.0]]
+\section*{SKILLS}
+\begin{itemize}[leftmargin=0.5cm, nosep]
+[[#skillCategories]]
+  \item \textbf{[[& name]]:} [[& skills]]
+[[/skillCategories]]
+\end{itemize}
+[[/skillCategories.0]]
+
+\end{document}
