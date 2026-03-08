@@ -44,3 +44,8 @@ React
 Supabase  
 Stripe  
 SQL
+
+## System Flow
+User → React Frontend → Supabase API → Database
+                                 ↓
+                             Stripe Billing
